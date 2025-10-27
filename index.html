@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New State RP – Das neue Mobile Roleplay-Erlebnis</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Fortschrittsbalken -->
+    <div id="progressBar"></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="logo-container">
+        <img src="/img/logo2.jpg" alt="New State RP Logo" class="logo-img" />
+        <span class="logo-text">New State RP</span>
+      </div>
+      <nav>
+        <a href="#about">Über uns</a>
+        <a href="#features">Features</a>
+        <a href="#faq">Hilfe</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section mit Hintergrundbild -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>New State RP</h1>
+        <p>
+          Baue dein Leben auf, führe Unternehmen, regiere die Stadt.<br />
+          Das realistischste Roleplay-Erlebnis auf dem Handy.
+        </p>
+        <a href="#join" class="btn">Jetzt beitreten</a>
+      </div>
+    </section>
+
+    <!-- Über das Spiel -->
+    <section id="about" class="section about">
+      <h2>Über das Spiel</h2>
+      <p>
+        <strong>New State RP</strong> ist eine lebendige Online-Stadt, in der du
+        deinen eigenen Weg gehst: Werde Unternehmer, Polizist, Arzt, Politiker –
+        oder schließe dich der Unterwelt an. Jede Entscheidung verändert die
+        Welt um dich herum.
+      </p>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team">
+      <h2>Unser Team</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <h3 class="teamnamen">
+            Jesko <br />
+            Projekt Manager
+          </h3>
+          <p>
+            Leitet das gesamte Projekt und kümmert sich um Organisation &
+            Vision.
+          </p>
+        </div>
+        <div class="feature">
+          <h3 class="teamnamen">
+            V1R3LL10N <br />
+            Technical Manager
+          </h3>
+          <p>
+            Verantwortlich für Programmierung, Serverstruktur und technische
+            Umsetzung.
+          </p>
+        </div>
+        <div class="feature">
+          <h3 class="teamnamen">
+            Dave Laronta <br />
+            Community Manager
+          </h3>
+          <p>
+            Trägt die Gesamtverantwortung für die Community und ist zuständig
+            für die Überwachung der Arbeit des gesamten Administratorenteams.
+          </p>
+        </div>
+        <div class="feature">
+          <h3 class="teamnamen">
+            tiremy <br />
+            Head of Administration
+          </h3>
+          <p>Verwaltet und koordiniert das Adminteam.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section features">
+      <h2>Hauptfeatures</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <h3>🏙️ Lebendige Stadt</h3>
+          <p>
+            Eine dynamische Metropole mit Wirtschaft, Politik und echten
+            Spielern.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>💼 Spieler-geführte Wirtschaft</h3>
+          <p>Gründe Firmen, baue Lieferketten auf und beeinflusse den Markt.</p>
+        </div>
+        <div class="feature">
+          <h3>🗳️ Politik & Gesetze</h3>
+          <p>
+            Nimm an Wahlen teil, werde Bürgermeister oder leite deine eigene
+            Partei.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>🚓 Realistische Berufe</h3>
+          <p>
+            Polizei, Medizin, Presse, Gangs – du entscheidest deinen Lebensweg.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="section join">
+      <h2>Werde Teil von New State RP</h2>
+      <p>
+        Jetzt bewerben für die Closed Beta – oder unserem Discord beitreten!
+      </p>
+      <div id="discordCount">
+        <p>🟢 Online: <span id="onlineCount">–</span></p>
+      </div>
+
+      <div class="btn-group">
+        <a href="#" class="btn discord">Discord Beitreten</a>
+        <a href="#" class="btn beta">Beta-Anmeldung</a>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq">
+      <h2>Häufige Fragen</h2>
+      <div id="faqContainer"></div>
+    </section>
+
+    <section id="support" class="section support">
+      <h2>Support</h2>
+      <p>
+        Wenn du Hilfe brauchst oder einen Fehler melden möchtest, fülle bitte
+        das Formular aus. Unser Team meldet sich so schnell wie möglich!
+      </p>
+
+      <form id="supportForm">
+        <div class="form-group">
+          <label for="username">Dein Name oder Discord-Tag</label>
+          <input
+            type="text"
+            id="username"
+            required
+            placeholder="z. B. Alex#1234"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="topic">Thema</label>
+          <input
+            type="text"
+            id="topic"
+            required
+            placeholder="z. B. Bugreport, Frage, Account-Problem"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Nachricht</label>
+          <textarea
+            id="message"
+            rows="5"
+            required
+            placeholder="Beschreibe dein Anliegen..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn">Absenden</button>
+      </form>
+
+      <p id="supportStatus" class="status-message"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 New State RP | Ein Community-Projekt</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
