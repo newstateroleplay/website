@@ -32,7 +32,7 @@ document.querySelector('.btn.beta').addEventListener('click', e => {
 });
 // === SUPPORT FORMULAR ===
 // Webhook-URL hier einfügen (achte darauf, sie geheim zu halten)
-const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1432022312160329980/0XyFXj5PNhp2Qkf5_lVrNT-cj0PxOdPuzQn1xJtWuu4zDGqes-1R-ufTHUE_cKRL4U7S";
+const DISCORD_WEBHOOK_URL = "";
 
 document.querySelector('#supportForm').addEventListener('submit', async (e) => {
   e.preventDefault();
