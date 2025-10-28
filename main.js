@@ -132,8 +132,35 @@ if (loader && bar) {
   }, 50);
 }
 
-// === Tutorial schließen ===
-function closeTutorial() {
-  tutorial.style.display = 'none';
+
+// === Fade-In ===
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+
+
+// === Musiksteuerung ===
+const music = document.getElementById("bgmusic");
+const muteBtn = document.getElementById("muteBtn");
+let musicStarted = false;
+
+// Musik erst starten, wenn der Nutzer interagiert
+function startMusicOnce() {
+  if (!musicStarted) {
+    music.play().catch(()=>{});
+    musicStarted = true;
+    document.removeEventListener("click", startMusicOnce);
+  }
 }
+document.addEventListener("click", startMusicOnce);
+
+muteBtn.onclick = () => {
+  music.muted = !music.muted;
+  muteBtn.textContent = music.muted ? "🔈" : "🔊";
+};
+// === Fade-In beim Laden der Seite ===
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
 
