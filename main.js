@@ -111,4 +111,29 @@ faqContainer.querySelectorAll(".faq-item").forEach(item => {
     item.classList.toggle("active");
   });
 });
+// === GTA-Style Loading Screen ===
+let progress = 0;
+const bar = document.getElementById('bar');
+const loader = document.getElementById('loader');
+const tutorial = document.getElementById('tutorial');
+
+if (loader && bar) {
+  const loadInterval = setInterval(() => {
+    progress += Math.random() * 10;
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(loadInterval);
+      setTimeout(() => {
+        loader.style.display = 'none';
+        tutorial.style.display = 'block';
+      }, 200);
+    }
+    bar.style.width = progress + '%';
+  }, 50);
+}
+
+// === Tutorial schließen ===
+function closeTutorial() {
+  tutorial.style.display = 'none';
+}
 

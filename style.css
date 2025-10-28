@@ -280,3 +280,50 @@ footer {
 .teamnamen {
   color: #00b8ff;
 }
+/* === GTA Loading Screen === */
+#loader {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: #0a0c12;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: #00b8ff;
+  z-index: 10000;
+}
+#loader h1 { font-size: 2rem; margin-bottom: 1rem; }
+#progress {
+  width: 80%; height: 8px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#bar {
+  height: 100%;
+  width: 0%;
+  background: #00b8ff;
+  transition: width .2s;
+}
+
+/* === Tutorial Popup === */
+#tutorial {
+  position: fixed;
+  bottom: 20px; right: 20px;
+  background: #0d0f14;
+  border: 1px solid #00b8ff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 12px rgba(0,0,0,0.7);
+  z-index: 2000;
+  display: none;
+  max-width: 250px;
+  font-family: 'Rajdhani', sans-serif;
+}
+#tutorial button {
+  background: #00b8ff;
+  border: none; border-radius: 6px;
+  padding: .4rem .8rem;
+  color: #000;
+  cursor: pointer;
+  margin-top: .5rem;
+  font-weight: 600;
+}
