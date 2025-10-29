@@ -112,12 +112,11 @@ faqContainer.querySelectorAll(".faq-item").forEach(item => {
   });
 });
 // === GTA-Style Loading Screen ===
-let progress = 0;
-const bar = document.getElementById('bar');
 const loader = document.getElementById('loader');
-const tutorial = document.getElementById('tutorial');
+const bar = document.getElementById('bar');
 
 if (loader && bar) {
+  let progress = 0;
   const loadInterval = setInterval(() => {
     progress += Math.random() * 10;
     if (progress >= 100) {
@@ -125,12 +124,12 @@ if (loader && bar) {
       clearInterval(loadInterval);
       setTimeout(() => {
         loader.style.display = 'none';
-        tutorial.style.display = 'block';
       }, 200);
     }
     bar.style.width = progress + '%';
   }, 50);
 }
+
 
 
 // === Fade-In ===
